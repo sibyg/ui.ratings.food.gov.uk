@@ -1,0 +1,21 @@
+<div style="text-align:center">
+</div>
+<h2>Local Authorities</h2>
+<ul class="local-authorities">
+  <li *ngFor="let localAuthority of localAuthorities"
+      [class.selected]="localAuthority === selectedLocalAuthority"
+      (click)="onSelect(localAuthority)">
+    <span class="badge">{{localAuthority.code}}</span> {{localAuthority.code}}
+  </li>
+</ul>
+
+<div class="brief-detail-local-authority" *ngIf="selectedLocalAuthority">
+  <h2>{{selectedLocalAuthority.code | uppercase}} </h2> <h4> Establishments
+  Count:{{selectedLocalAuthority.establishmentCount}} Published On {{selectedLocalAuthority.lastPublishedDate}}
+  <button class="goto-ratings-summary" (click)="gotoRatingsSummary()">View Ratings Summary</button> </h4>
+</div>
+
+<button class="back-to-dashboard" (click)="goBack()">Back to Dashboard</button>
+
+
+

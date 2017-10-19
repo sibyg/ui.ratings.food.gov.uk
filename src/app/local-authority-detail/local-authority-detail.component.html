@@ -1,0 +1,20 @@
+<div style="text-align:center">
+</div>
+<h2>Ratings Summary</h2>
+<div>
+  <table class="ratings-summary" border="1">
+    <tr>
+      <th>Rating</th>
+      <th>Percentage</th>
+    </tr>
+    <tr *ngFor="let ratingSummary of ratingsSummaries">
+      <td>
+        {{ratingSummary.rating.key}}
+      </td>
+      <td>
+        {{ratingSummary.percentage}}
+      </td>
+    </tr>
+  </table>
+  <button class="back-to-region" (click)="goBack()">Back to Region</button>
+</div>
