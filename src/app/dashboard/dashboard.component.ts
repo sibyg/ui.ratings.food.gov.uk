@@ -15,6 +15,6 @@ export class DashboardComponent implements OnInit {
   constructor(private localAuthorityService: LocalAuthorityService) {}
 
   ngOnInit(): void {
-    this.localAuthorityService.getRegions().then(regions => this.regions = regions);
+    this.localAuthorityService.getRegions().then(regions => this.regions = regions.regions);
   }
 }

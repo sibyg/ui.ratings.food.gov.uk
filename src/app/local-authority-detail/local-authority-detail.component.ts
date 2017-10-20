@@ -24,7 +24,7 @@ export class LocalAuthorityDetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap
       .switchMap((params: ParamMap) => this.localAuthorityService.getRatingsForAGivenLocalAuthority(params.get('regionName'), params.get('localAuthorityCode')))
-      .subscribe(ratingsSummaries => this.ratingsSummaries = ratingsSummaries);
+      .subscribe(ratingsSummaries => this.ratingsSummaries = ratingsSummaries.ratingsSummaries);
   }
 
   goBack(): void {

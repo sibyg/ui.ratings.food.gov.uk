@@ -22,7 +22,7 @@ export class LocalAuthoritiesComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap
       .switchMap((params: ParamMap) => this.localAuthorityService.getLocalAuthoritiesByRegion(params.get('regionName')))
-      .subscribe(localAuthorities => this.localAuthorities = localAuthorities);
+      .subscribe(localAuthorities => this.localAuthorities = localAuthorities.localAuthorities);
   }
 
   onSelect(localAuthority: LocalAuthority): void {

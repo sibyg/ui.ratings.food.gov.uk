@@ -5,3 +5,8 @@ export class LocalAuthority {
   establishmentCount: number;
   lastPublishedDate: string;
 }
+
+
+export class LocalAuthorities {
+  localAuthorities: LocalAuthority[];
+}
